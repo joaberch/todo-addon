@@ -1,0 +1,28 @@
+on:
+    push:
+        tags:
+            - "v*.*.*"
+jobs:
+  build:
+    runs-on: ubuntu-latest 
+    steps:
+    - uses: actions/checkout@v4
+
+    - name: Set up Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: '22.x'
+    
+    - name: npm install, build, and test
+      run: |
+        npm install
+        npm audit fix
+    
+    - name: Install lftp
+        run: sudo apt-get install fltp
+
+    - name: Run pack:ff
+      env:
+        APIKEY: ${{secrets.APIKEY}}
+        APISECRET: ${{secrets.APISECRET}}
+      run: npm run pack:ff
