@@ -3,13 +3,13 @@
 	  "dev:ff": "npm run ff",
 	  "dev:edge": "npm run edge",
 	  "dev:chrome": "npm run chrome",
-	  "ff": "web-ext run ...",
-	  "edge": "web-ext run ...",
-	  "chrome": "web-ext run ...",
+	  "ff": "web-ext run --target firefox-desktop",
+	  "edge": "...",
+	  "chrome": "web-ext run --target chromium",
 	  "pack:ff": "web-ext sign --api-key=$APIKEY --api-secret=$APISECRET --channel unlisted",
 	  "lint": "...",
 	  "lint:fix": "..."
-  }
+  },
   "dependencies": {
     "web-ext": "^8.3.0"
   }
