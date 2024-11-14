@@ -4,7 +4,7 @@
 	  "dev:edge": "npm run edge",
 	  "dev:chrome": "npm run chrome",
 	  "ff": "web-ext run --target firefox-desktop",
-	  "edge": "...",
+	  "edge": "web-ext run --target chromium --chromium-binary \"C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe\"",
 	  "chrome": "web-ext run --target chromium",
 	  "pack:ff": "web-ext sign --api-key=$APIKEY --api-secret=$APISECRET --channel unlisted",
 	  "lint": "...",
