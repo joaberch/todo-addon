@@ -1,0 +1,24 @@
+{
+  "todolist_id": "todolist_1",  
+  "title": "Liste de tâches",  
+  "tasks": [
+    {
+      "id": "task_1", 
+      "title": "Acheter du lait", 
+      "description": "Acheter du lait au supermarché",
+      "status": "to-do" 
+    },
+    {
+      "id": "task_2",
+      "title": "Faire la lessive",
+      "description": "Laver les vêtements", 
+      "status": "in-progress"
+    },
+    {
+      "id": "task_3",
+      "title": "Préparer le dîner",
+      "description": "Faire un dîner rapide", 
+      "status": "done"
+    }
+  ]
+}

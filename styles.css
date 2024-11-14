@@ -1,0 +1,97 @@
+:root {
+  --size: 900px;
+  --mainColor: #FFC30B ;
+  --btnColorWarning: #fff;
+  --btnBgWarning: #ffc107;
+  --btnBgInfo: #17a2b8;
+  --bgBox: #fff;
+  --bgBody: #eeeff0;
+  --bgCheckbox: #fff;
+  --borderCheckbox: #000;
+  --tableTHLine: #544e4e;
+  --tableTREven: #fff;
+  --tableTROdd: #f2f2f2;
+  --link: #007aff;
+  --colorDebug: #000;
+}
+body{
+  font-family: Arial, sans-serif;
+  font-size: 100%;
+  color: #333;
+  margin:0;
+  padding: 0;
+  background-color: var(--bgBody);
+}
+body.popupBody{
+  background-color: white !important;
+}
+.displayH1 {
+  background-color: var(--mainColor);
+  color: #333333;
+  width: 250px;
+}
+.h1Detail {
+  width: 350px;
+}
+h1 {
+  display: flex;
+  align-items: center;
+  padding: 10px 60px 10px 10px;
+  font-size: 120%;
+}
+table {
+  width: var(--size);
+  max-width: 100%;
+  margin: 20px auto;
+  border-collapse: collapse;
+  background-color: var(--bgBox);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+thead {
+  background-color: var(--mainColor);
+}
+
+thead th {
+  color: var(--btnColorWarning);
+  font-weight: bold;
+  padding: 12px;
+  text-align: left;
+  font-size: 1rem;
+  border-bottom: 2px solid var(--tableTHLine);
+}
+
+tbody tr {
+  transition: background-color 0.2s ease;
+}
+
+tbody tr:nth-child(even) {
+  background-color: var(--tableTREven);
+}
+
+tbody tr:nth-child(odd) {
+  background-color: var(--tableTROdd);
+}
+
+tbody tr:hover {
+  background-color: #f5f5f5;
+}
+
+td {
+  padding: 10px 15px;
+  font-size: 0.95rem;
+  color: var(--colorDebug);
+  border-bottom: 1px solid #ddd;
+}
+
+td:first-child,
+th:first-child {
+  padding-left: 20px;
+}
+
+td:last-child,
+th:last-child {
+  padding-right: 20px;
+}

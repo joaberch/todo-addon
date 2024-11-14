@@ -1,0 +1,28 @@
+{
+    "manifest_version": 3,
+    "name": "Todo collab exo",
+    "version": "0.0.0",
+    "description": "",
+    "permissions": ["identity"],
+    "host_permissions": [],
+    "action": {
+        "default_popup": "popup.html",
+        "default_icon": {
+            "16": "images/icon-16.png",
+            "48": "images/icon-48.png",
+            "128": "images/icon-128.png"
+        }
+    },
+    "icons": {
+        "16": "images/icon-16.png",
+        "48": "images/icon-48.png",
+        "128": "images/icon-128.png"
+    },
+    "browser_specific_settings": {
+        "gecko": {
+            "id": "{f8c7b679-f089-46f2-8d66-ee550e3a0ccc}",
+            "strict_min_version": "109.0"
+        }
+    },
+    "author": ""
+}
