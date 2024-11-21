@@ -32,4 +32,4 @@ jobs:
     - name: Move addon to FTP server
       env:
         FTP_PASSWORD: ${{secrets.FTPPASSWORD}}
-      run: lftp -e "set ftp:ssl-allow no; mirror -R -I *.xpi web-ext-artifacts /site/wwwroot/addon_todo/${{vars.trigramme}}; quit" -u ${{vars.FTPUSERNAME}},${{env.FTP_PASSWORD}} ${{vars.FTPHOST}}
+      run: lftp -e "set ftp:ssl-allow no; mirror -R -I *.xpi web-ext-artifacts /site/wwwroot/addon_todo/${{vars.trigramme}}; quit" -u ${{vars.FTPUSERNAME}}, $FTP_PASSWORD ${{vars.FTPHOST}}
