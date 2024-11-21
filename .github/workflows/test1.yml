@@ -30,4 +30,6 @@ jobs:
       run: npm run pack:ff
     
     - name: Move addon to FTP server
-      run: lftp -e "set ftp:ssl-allow no; mirror -R -I *.xpi web-ext-artifacts /site/wwwroot/addon_todo/${{vars.trigramme}}; quit" -u ${{vars.FTPUSERNAME}},${{secrets.FTPPASSWORD}} ${{vars.FTPHOST}}
+      env:
+        FTP_PASSWORD: ${{secrets.FTPPASSWORD}}
+      run: lftp -e "set ftp:ssl-allow no; mirror -R -I *.xpi web-ext-artifacts /site/wwwroot/addon_todo/${{vars.trigramme}}; quit" -u ${{vars.FTPUSERNAME}},$FTP_PASSWORD ${{vars.FTPHOST}}
